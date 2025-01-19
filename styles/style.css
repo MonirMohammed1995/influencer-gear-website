@@ -103,7 +103,21 @@
     background-size: 25rem 25rem;
     background-position: center;
 }
-
+.container-logo{
+    display: flex;
+    justify-content: center;
+}
+.companies-logo{
+    border: 2px solid red;
+    position: absolute;
+    margin-top: 50px;
+    height: 120px;
+    width: 1110px;
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* Responsive */
 @media screen and (max-width: 576px) {
     .menu-icon, .list-icon{
