@@ -27,16 +27,23 @@
     border-radius: 40px;
     cursor: pointer;
 }
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 130px;
+}
 /* dark1 */
 .text-deep-gray{
-
+    color: #0A0826;
 }
 /* dark2 */
 .text-gray{
-
+    color: #18191F;
 }
 /* dark3 */
-.text-light-gary{
+.text-light-gray{
     color: #3A3A3A;
 }
 /* header style */
@@ -84,6 +91,7 @@
     max-height: 480px;
     align-items: center;
     margin-top: 80px;
+    margin-bottom: 80px;
 }
 .banner-content{
     max-width: 36rem;
@@ -106,30 +114,97 @@
 .container-logo{
     display: flex;
     justify-content: center;
+    margin: 0 auto;
 }
 .companies-logo{
-    border: 2px solid red;
-    position: absolute;
-    margin-top: 50px;
     height: 120px;
-    width: 1110px;
-    gap: 40px;
+    width: 900px;
+    gap: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/* card section */
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collection-title{
+    font-size: 60px;
+    font-weight: 500px;
+}
+.all-cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}
+.card{
+    width: 350px;
+    height: 550px;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card>img{
+    width: 100%;
+}
+.card-title{
+    font-size: 25px;
+    font-weight: 500px;
+}
+.card-amount{
+    font-size: 20px;
+    font-weight: 400;
+}
+.card-description{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.btn-card{
+    margin-top: 50px;
+    margin-left: 1110px;
+    width: 110px;
+    height: 30ppx;
+    background-color: white;
+    border: none;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+    color: #E02C6D;
+}
+
 /* Responsive */
 @media screen and (max-width: 576px) {
     .menu-icon, .list-icon{
         display: flex;
-        flex-direction: column;
     }
     .nav-links{
         display: none;
     }
     .banner{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25rem;
+    }
+    .banner-content{
         text-align: center;
+    }
+    main{
+        flex-direction: column;
+    }
+    .companies-logo{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .all-cards{
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    .btn-card{
+        text-align: center;
+        align-items: center;
     }
 }
